@@ -49,8 +49,8 @@ export async function getCommitMessage(): Promise<string | undefined> {
     const {head} = prEvent.pull_request
     const res = await github.getOctokit(token).rest.git.getCommit({
       commit_sha: head.sha,
-      repo: head.repo.name,
-      owner: head.repo.owner.login,
+      repo: head?.repo?.name || "",
+      owner: head?.repo?.owner?.login || "",
     })
     commitMessage = res.data.message
   }
