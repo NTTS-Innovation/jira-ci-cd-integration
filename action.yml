@@ -35,5 +35,5 @@ inputs:
     required: false
     description: Will be parsed from branch name automatically if not provided.
 runs:
-  using: 'node22'
+  using: 'node20'
   main: 'dist/github/main.ts'
