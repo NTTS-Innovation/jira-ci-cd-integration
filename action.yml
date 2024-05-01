@@ -36,4 +36,4 @@ inputs:
     description: Will be parsed from branch name automatically if not provided.
 runs:
   using: 'node20'
-  main: 'dist/github/main.ts'
+  main: 'dist/github/index.js'
