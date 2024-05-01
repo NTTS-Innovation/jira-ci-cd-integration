@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # Generate build
 # ------------------------------------------------------------------------------
-FROM node:16-alpine as generator
+FROM node:22.0.0-alpine3.19 as generator
 
 LABEL stage=generator
 
@@ -25,7 +25,7 @@ RUN yarn workspaces focus --production
 # ------------------------------------------------------------------------------
 # Second image (release image)
 # ------------------------------------------------------------------------------
-FROM node:16-alpine
+FROM node:22.0.0-alpine3.19
 
 WORKDIR /usr/src/jira-ci-cd-integration
 
